@@ -1,0 +1,164 @@
+{
+  "name": "actionPackages/10543104",
+  "deploymentStatus": {
+    "state": "NEW",
+    "previewEndTime": "2017-01-06T07:18:28.756127Z"
+  },
+  "versionLabel": "API.AI generated package for agent Messenger",
+  "agentInfo": {
+    "languageCode": "en-US",
+    "projectId": "shout-154023",
+    "invocationNames": [
+      "Messenger"
+    ],
+    "voiceName": "female_2",
+    "logoUrl": "https://static.api.ai/assets/images/logo.png"
+  },
+  "actions": [
+    {
+      "description": "Text",
+      "initialTrigger": {
+        "intent": "assistant.intent.action.MAIN",
+        "queryPatterns": [
+          {
+            "queryPattern": "Send a message to  $Contact:Contact  saying  $SchemaOrg_Text:Message"
+          },
+          {
+            "queryPattern": "Message  $Contact:Contact  saying  $SchemaOrg_Text:Message"
+          },
+          {
+            "queryPattern": "Send  $SchemaOrg_Text:Message  to  $Contact:Contact"
+          },
+          {
+            "queryPattern": "Text  $SchemaOrg_Text:Message  to  $Contact:Contact"
+          },
+          {
+            "queryPattern": "Send a text"
+          },
+          {
+            "queryPattern": "Text  $Contact:Contact  saying  $SchemaOrg_Text:Message"
+          },
+          {
+            "queryPattern": "Send a text to  $Contact:Contact  saying  $SchemaOrg_Text:Message"
+          }
+        ]
+      },
+      "inDialogTriggers": [
+        {
+          "intent": "2de64c68-99f4-4d3c-8535-02ab035be94a",
+          "queryPatterns": [
+            {
+              "queryPattern": "Reset phone number"
+            },
+            {
+              "queryPattern": "New phone number"
+            },
+            {
+              "queryPattern": "New user"
+            },
+            {
+              "queryPattern": "Reset user"
+            }
+          ]
+        },
+        {
+          "intent": "RAW_TEXT",
+          "queryPatterns": [
+            {
+              "queryPattern": "$SchemaOrg_Text:text"
+            }
+          ]
+        }
+      ],
+      "httpExecution": {
+        "url": "https://api.api.ai/api/integrations/google?token\u003d797b61c34c6e4a85aa5f49d8a406c800\u0026lang\u003den-US"
+      },
+      "signInRequired": false
+    },
+    {
+      "description": "Reset phone number",
+      "initialTrigger": {
+        "intent": "Reset phone number",
+        "queryPatterns": [
+          {
+            "queryPattern": "Reset phone number"
+          },
+          {
+            "queryPattern": "New phone number"
+          },
+          {
+            "queryPattern": "New user"
+          },
+          {
+            "queryPattern": "Reset user"
+          }
+        ]
+      },
+      "inDialogTriggers": [
+        {
+          "intent": "2de64c68-99f4-4d3c-8535-02ab035be94a",
+          "queryPatterns": [
+            {
+              "queryPattern": "Reset phone number"
+            },
+            {
+              "queryPattern": "New phone number"
+            },
+            {
+              "queryPattern": "New user"
+            },
+            {
+              "queryPattern": "Reset user"
+            }
+          ]
+        },
+        {
+          "intent": "RAW_TEXT",
+          "queryPatterns": [
+            {
+              "queryPattern": "$SchemaOrg_Text:text"
+            }
+          ]
+        }
+      ],
+      "httpExecution": {
+        "url": "https://api.api.ai/api/integrations/google?token\u003d797b61c34c6e4a85aa5f49d8a406c800\u0026lang\u003den-US"
+      },
+      "signInRequired": false
+    }
+  ],
+  "customTypes": [
+    {
+      "name": "$Contact",
+      "items": [
+        {
+          "key": "Mom",
+          "synonyms": [
+            "Mom",
+            "Mother"
+          ]
+        },
+        {
+          "key": "Dad",
+          "synonyms": [
+            "Dad",
+            "Father"
+          ]
+        },
+        {
+          "key": "Mother",
+          "synonyms": [
+            "Mother"
+          ]
+        },
+        {
+          "key": "Father",
+          "synonyms": [
+            "Father"
+          ]
+        }
+      ],
+      "isDynamicDefined": true
+    }
+  ]
+}
